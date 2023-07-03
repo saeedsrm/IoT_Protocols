@@ -30,13 +30,13 @@ def send_request_to_iot_panel():
     headers = {
         'Content-Type': 'application/json'
     }
-    requests.request("POST", url, headers=headers, data=payload)
+    # requests.request("POST", url, headers=headers, data=payload)
     print('data sent to server')
-        # try:
-        #     requests.request("POST", url, headers=headers, data=payload)
-        #     print('data sent to server')
-        # except:
-        #     print('some error in sending data to server')
+    try:
+        requests.request("POST", url, headers=headers, data=payload)
+        print('data sent to server')
+    except:
+        print('some error in sending data to server')
 
 
 while True:
